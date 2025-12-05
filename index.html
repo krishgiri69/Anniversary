@@ -83,7 +83,7 @@
   /* Love letter style */
   .letter-container {
     position: relative;
-    background: linear-gradient(to bottom, #fff6f8, #ffe8f0); /* soft gradient paper */
+    background: linear-gradient(to bottom, #fff6f8, #ffe8f0);
     border: 2px dashed #ffb1c8;
     border-radius: 25px;
     padding: 40px 30px 30px 30px;
@@ -188,7 +188,7 @@
     <img src="boque.png">
   </p>
 
-  <audio id="anniversarySong" src="song.mp3"></audio>
+  <audio id="anniversarySong" src="mylove.mp3"></audio>
 </div>
 
 <!-- LOVE LETTER SECTION -->
@@ -237,21 +237,21 @@ function reveal() {
     audio.play().catch(() => {
       console.log("Audio play blocked by browser. Click the button again.");
     });
-  }
-}
 
-// Falling "I love you Sanu ❤️" text
-for (let i = 0; i < 25; i++) {
-  const text = document.createElement("div");
-  text.classList.add("falling");
-  text.textContent = "I love you Sanu ❤️";
-  text.style.left = Math.random() * 100 + "vw";
-  text.style.animation = `fall ${4 + Math.random() * 5}s linear infinite`;
-  text.style.animationDelay = Math.random() * 5 + "s";
-  text.style.opacity = 0.5 + Math.random() * 0.5;
-  text.style.fontSize = 14 + Math.random() * 10 + "px";
-  text.style.fontWeight = "bold";
-  document.body.appendChild(text);
+    // Falling "I love you Sanu ❤️" text only on button click
+    for (let i = 0; i < 12; i++) { // fewer texts
+      const text = document.createElement("div");
+      text.classList.add("falling");
+      text.textContent = "I love you Sanu ❤️";
+      text.style.left = Math.random() * 100 + "vw";
+      text.style.animation = `fall ${4 + Math.random() * 5}s linear infinite`;
+      text.style.animationDelay = Math.random() * 5 + "s";
+      text.style.opacity = 0.5 + Math.random() * 0.5;
+      text.style.fontSize = 14 + Math.random() * 10 + "px";
+      text.style.fontWeight = "bold";
+      document.body.appendChild(text);
+    }
+  }
 }
 </script>
 
