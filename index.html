@@ -114,7 +114,7 @@
     opacity: 0.3;
   }
 
-  /* falling petals */
+  /* Falling text */
   .falling {
     position: fixed;
     top: -10px;
@@ -122,6 +122,8 @@
     pointer-events: none;
     user-select: none;
     font-size: 24px;
+    font-weight: bold;
+    color: #ff4f7b;
   }
 
   @keyframes fall {
@@ -237,20 +239,19 @@ function reveal() {
     });
   }
 }
-</script>
 
-<!-- FALLING FLOWERS ANIMATION -->
-<script>
+// Falling "I love you Sanu ❤️" text
 for (let i = 0; i < 25; i++) {
-  const petal = document.createElement("div");
-  petal.classList.add("falling");
-  petal.textContent = "🌸";
-  petal.style.left = Math.random() * 100 + "vw";
-  petal.style.animation = `fall ${4 + Math.random() * 5}s linear infinite`;
-  petal.style.animationDelay = Math.random() * 5 + "s";
-  petal.style.opacity = 0.6 + Math.random() * 0.4;
-  petal.style.fontSize = 20 + Math.random() * 15 + "px";
-  document.body.appendChild(petal);
+  const text = document.createElement("div");
+  text.classList.add("falling");
+  text.textContent = "I love you Sanu ❤️";
+  text.style.left = Math.random() * 100 + "vw";
+  text.style.animation = `fall ${4 + Math.random() * 5}s linear infinite`;
+  text.style.animationDelay = Math.random() * 5 + "s";
+  text.style.opacity = 0.5 + Math.random() * 0.5;
+  text.style.fontSize = 14 + Math.random() * 10 + "px";
+  text.style.fontWeight = "bold";
+  document.body.appendChild(text);
 }
 </script>
 
